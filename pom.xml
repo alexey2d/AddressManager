@@ -7,6 +7,7 @@
     <groupId>ua.levelup</groupId>
     <artifactId>AddressManager</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <spring.version>4.2.4.RELEASE</spring.version>
