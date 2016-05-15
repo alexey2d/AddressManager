@@ -11,10 +11,14 @@ import java.util.List;
 
 @Entity
 @Table(name = "Address")
+@NamedQuery(name = "Address.getAll", query = "SELECT a FROM Address a")
 public class Address implements Serializable {
     private long id;
     private String content;
     private List<Phone> phones;
+
+    public Address() {
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,13 +27,25 @@ public class Address implements Serializable {
         return this.id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
     @Column(name = "CONTENT")
     public String getContent() {
         return content;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "phones")
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "address") // ссылаться на себя же
     public List<Phone> getPhones() {
         return phones;
+    }
+
+    public void setPhones(List<Phone> phones) {
+        this.phones = phones;
     }
 }
