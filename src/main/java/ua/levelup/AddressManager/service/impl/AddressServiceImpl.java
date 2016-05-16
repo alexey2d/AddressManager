@@ -41,4 +41,9 @@ public class AddressServiceImpl implements AddressService {
     public boolean isExist(Address address) {
         return addressRepository.isExist(address);
     }
+
+    @Override
+    public boolean isExist(String content) {
+        return false;
+    }
 }

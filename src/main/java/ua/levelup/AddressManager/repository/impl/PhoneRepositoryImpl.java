@@ -43,4 +43,10 @@ public class PhoneRepositoryImpl implements PhoneRepository{
     public boolean isExist(Phone phone) {
         return findById(phone.getId()) == null ? false : true;
     }
+
+    @Override
+    public boolean isExist(String number) {
+        Phone phone = (Phone) hibernateTemplate.find("FROM Phone p WHERE p.number = ?", number);
+        return phone == null ? false : true;
+    }
 }

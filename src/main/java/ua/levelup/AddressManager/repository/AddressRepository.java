@@ -14,4 +14,5 @@ public interface AddressRepository {
     void deleteById(long id);
     Address findById(long id);
     boolean isExist(Address address);
+    boolean isExist(String content);
 }

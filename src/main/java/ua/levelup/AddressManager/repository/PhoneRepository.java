@@ -13,4 +13,5 @@ public interface PhoneRepository {
     Phone findById(long id);
     void deleteById(long id);
     boolean isExist(Phone address);
+    boolean isExist(String number);
 }

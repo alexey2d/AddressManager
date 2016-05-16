@@ -31,7 +31,7 @@ public class Address implements Serializable {
         this.id = id;
     }
 
-    @Column(name = "CONTENT")
+    @Column(name = "CONTENT", unique = true)
     public String getContent() {
         return content;
     }

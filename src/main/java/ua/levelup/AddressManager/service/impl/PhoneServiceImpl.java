@@ -2,6 +2,7 @@ package ua.levelup.AddressManager.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import ua.levelup.AddressManager.model.Phone;
+import ua.levelup.AddressManager.repository.PhoneRepository;
 import ua.levelup.AddressManager.service.PhoneService;
 
 import java.util.List;
@@ -10,30 +11,36 @@ import java.util.List;
  * Created by java on 15.05.2016.
  */
 public class PhoneServiceImpl implements PhoneService {
-    @Autowired PhoneService phoneService;
+    @Autowired
+    PhoneRepository phoneRepository;
 
     @Override
     public void save(Phone phone) {
-        phoneService.save(phone);
+        phoneRepository.save(phone);
     }
 
     @Override
     public List<Phone> getAll() {
-        return phoneService.getAll();
+        return phoneRepository.getAll();
     }
 
     @Override
     public Phone findById(long id) {
-        return phoneService.findById(id);
+        return phoneRepository.findById(id);
     }
 
     @Override
     public void deleteById(long id) {
-        phoneService.deleteById(id);
+        phoneRepository.deleteById(id);
     }
 
     @Override
     public boolean isExist(Phone address) {
-        return phoneService.isExist(address);
+        return phoneRepository.isExist(address);
+    }
+
+    @Override
+    public boolean isExist(String number) {
+        return phoneRepository.isExist(number);
     }
 }

@@ -50,4 +50,10 @@ public class AddressRepositoryImpl implements AddressRepository {
     public boolean isExist(Address address) {
         return findById(address.getId()) == null ? false : true;
     }
+
+    @Override
+    public boolean isExist(String number) {
+        Address address = (Address) hibernateTemplate.find("FROM Address ad WHERE ad.content = ?", number);
+        return address == null ? false : true;
+    }
 }
