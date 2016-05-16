@@ -6,7 +6,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
+
+
+<%--
+  Created by IntelliJ IDEA.
+  User: User
+  Date: 15.05.2016
+  Time: 18:01
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<link rel="stylesheet" type="text/css" href="/resources/css/main.css">
 
 
 <div>
@@ -17,8 +28,8 @@
                 <td  align="center" ><input type="text" value="" name="content"></td>
             </tr>
             <tr>
-                <td  align="center" >phones:</td>
-                <td  align="center" ><input type="text" value="" name="phones"></td>
+                <td  align="center" >phone:</td>
+                <td  align="center" ><input type="text" value="" name="phone"></td>
             </tr>
             <tr>
                 <td  align="center" >country:</td>
@@ -26,9 +37,9 @@
                     <select name="country">
                         <option selected value="UKRAINE">UKRAINE</option>
                         <option value="GERMANY">GERMANY</option>
-                        <option value="RUSSIAN_FEDERATION">RUSSIAN FEDERATION</option>
-                        <option value="UNITED_KINGDOM">UNITED KINGDOM</option>
-                        <option value="UNITED_STATES">UNITED STATES</option>
+                        <option value="RUSSIAN_FEDERATION">RUSSIAN_FEDERATION</option>
+                        <option value="UNITED_KINGDOM">UNITED_KINGDOM</option>
+                        <option value="UNITED_STATES">UNITED_STATES</option>
                     </select>
                 </td>
             </tr>

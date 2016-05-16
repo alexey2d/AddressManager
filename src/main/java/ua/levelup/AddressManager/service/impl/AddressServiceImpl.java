@@ -19,6 +19,9 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public void save(Address address) {
+//        if(address == null) {
+//            throw new IllegalArgumentException("Address cann't be null");
+//        }
         addressRepository.save(address);
     }
 

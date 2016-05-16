@@ -10,13 +10,22 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 @JsonAutoDetect
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class AddressDto {
-    private String adressContent;
+    private String addressContent;
+    private String phoneNumber;
 
     public String getAdressContent() {
-        return adressContent;
+        return addressContent;
     }
 
     public void setAdressContent(String adressContent) {
-        this.adressContent = adressContent;
+        this.addressContent = adressContent;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

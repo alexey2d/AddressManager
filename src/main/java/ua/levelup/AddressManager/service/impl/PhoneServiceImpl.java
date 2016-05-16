@@ -1,6 +1,7 @@
 package ua.levelup.AddressManager.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ua.levelup.AddressManager.model.Phone;
 import ua.levelup.AddressManager.repository.PhoneRepository;
 import ua.levelup.AddressManager.service.PhoneService;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by java on 15.05.2016.
  */
+@Service
 public class PhoneServiceImpl implements PhoneService {
     @Autowired
     PhoneRepository phoneRepository;
