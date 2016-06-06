@@ -1,5 +1,6 @@
 package ua.levelup.AddressManager.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import ua.levelup.AddressManager.service.PhoneService;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * Created by java on 15.05.2016.
  */
@@ -22,6 +24,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/address")
 public class HelloController {
+    private static final Logger LOG = Logger.getLogger(HelloController.class);
 
     @Autowired
     private AddressService addressService;
@@ -40,10 +43,13 @@ public class HelloController {
 //        return "create";
 //    }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+//    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String createAddress(@ModelAttribute AddressDto addressDto, Model model) {
+        LOG.info("trace start");
+        LOG.info(model);
 
-        Address address = new Address();
+        /*Address address = new Address();
         address.setContent(addressDto.getAdressContent());
 //        address.setCountry(addressDto.getCountry());
         addressService.save(address);
@@ -59,7 +65,7 @@ public class HelloController {
 
         model.addAttribute("content", address.getContent());
 //        model.addAttribute("country", address.getCountry());
-        model.addAttribute("phones", address.getPhones());
+        model.addAttribute("phones", address.getPhones());*/
         return "index";
     }
 

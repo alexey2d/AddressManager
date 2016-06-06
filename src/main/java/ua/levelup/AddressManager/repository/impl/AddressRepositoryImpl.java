@@ -56,4 +56,6 @@ public class AddressRepositoryImpl implements AddressRepository {
         Address address = (Address) hibernateTemplate.find("FROM Address ad WHERE ad.content = ?", number);
         return address == null ? false : true;
     }
+
+
 }
